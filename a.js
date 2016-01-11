@@ -180,8 +180,8 @@ window.onload=function()
 		obj.timer=setInterval(function(){
 
 			obj.style.width=obj.offsetWidth - 10 + 'px';
-			obj.style.height=obj.offsetWidth - 10 + 'px';
-			if(tempX==0 && tempY==0)
+			obj.style.height=obj.offsetHeight - 10 + 'px';
+			if(obj.offsetWidth==0 || obj.offsetHeight==0)
 			{
 				clearInterval(obj.timer);
 				document.body.removeChild(obj);
