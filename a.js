@@ -6,8 +6,8 @@ window.onload=function()
 {
 	var auto=document.getElementById("play");
 	var SIZE=100;  //边界
-	var borderX=document.body.clientWidth;   //网页宽度
-	var borderY=document.body.clientHeight;  //网页高度
+	var borderX=document.documentElement.clientWidth;   //网页可视区宽度
+	var borderY=document.documentElement.clientHeight;  //网页可视区高度
 	var SPEED_MAX = 20;   //最大速度
 	var SPEED_RATE = 4;   //速度变化率
 
@@ -25,10 +25,10 @@ window.onload=function()
 				x+=xSpeed;                    //改变x
 				y+=ySpeed;                    //改变y
 				
-				if(x<=SIZE)                    //限制x的移动范围
+				if(x<=0)                    //限制x的移动范围
 				{                              
 					xSpeed=rnd(0,SPEED_MAX);
-					x=SIZE;
+					x=0;
 				}
 				else if(x>=borderX-SIZE)
 				{
@@ -36,10 +36,10 @@ window.onload=function()
 					x=borderX-SIZE;
 				}
 				
-				if(y<=SIZE)                       //限制y的移动范围
+				if(y<=0)                       //限制y的移动范围
 				{
 					ySpeed=rnd(0,SPEED_MAX);
-					y=SIZE;
+					y=0;
 				}
 				else if(y>=borderY-SIZE)         
 				{    
