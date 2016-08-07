@@ -78,7 +78,7 @@ window.onload=function()
 			},30);
 			
 			auto.value="手动移动";
-			document.onmousedown=null;	//禁止自动移动
+			document.onmousedown=null;	//禁止手动移动
 		}
 		else
 		{
